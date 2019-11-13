@@ -372,11 +372,27 @@ body {
     &__search {
       order: 1;
       flex-direction: column;
+      margin: 0 auto;
+    }
+    &__form {
+      order:1;
+      min-height: 30px;
+      border: 1px solid $colBor;
+      margin-top: 2px;
+    }
+    &__suppots {
+      order:2;
+      min-height: 30px;
+      border: 1px solid $colBor;
+      margin-top: 2px;
     }
 
     &__contFirts {
+      min-width: 100%;
+      box-sizing: border-box;
       order: 2;
       flex-direction: column;
+      margin: 0 auto;
     }
   }
 }
