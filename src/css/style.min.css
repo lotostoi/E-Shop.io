@@ -896,6 +896,9 @@ body {
 }
 
 @media screen and (max-width: 850px) {
+  .menuBottom {
+    padding: 5px 20px;
+  }
   .menuBottom__search {
     min-width: 100%;
     order: 1;
@@ -909,8 +912,6 @@ body {
     min-height: 30px;
     border: 1px solid #e4e8f0;
     margin: 0;
-    margin-top: 2px;
-    box-sizing: border-box;
   }
   .menuBottom__suppots, .menuBottom__a {
     width: 100%;
@@ -1934,6 +1935,7 @@ div[data-id="4"] {
   .productsPage {
     width: 100%;
     margin: 25px 0 0 0;
+    justify-content: space-between;
   }
 }
 
@@ -2003,6 +2005,22 @@ div[data-id="4"] {
 @media screen and (max-width: 900px) {
   .contItem {
     width: 85%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .contItem {
+    width: 45%;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contItem {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
   }
 }
 

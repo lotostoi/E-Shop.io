@@ -793,6 +793,7 @@ body {
   .productsPage {
     width: 100%;
     margin: 25px 0 0 0;
+    justify-content: space-between;
   }
 }
 
@@ -862,7 +863,21 @@ body {
 @include to(900px) {
   .contItem {
     width: 85%;
-    //margin: 1%;
+  }
+}
+
+@include to(700px) {
+  .contItem {
+    width: 45%;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}
+@include to(600px) {
+  .contItem {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
   }
 }
 
