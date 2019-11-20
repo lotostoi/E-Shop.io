@@ -1162,7 +1162,7 @@ div[data-id="4"] {
   padding: 50px 116px;
 }
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1380px) {
   .bodyShop {
     padding: 30px 25px;
   }
@@ -1172,20 +1172,15 @@ div[data-id="4"] {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
-  margin: 0;
   align-items: center;
-  min-height: 57px;
   border-radius: 5px;
   background-color: #fff;
 }
 
 .search__sortBy {
-  height: 100%;
+  min-height: 57px;
   display: flex;
-  max-width: 245px;
-  margin: 0 20px;
+  width: 245px;
   flex-wrap: wrap;
   align-items: center;
   padding: 0 20px;
@@ -1195,7 +1190,7 @@ div[data-id="4"] {
 .search__titelSort {
   font-family: "Montserrat regular", "Arial", Sans-serif;
   font-size: 11px;
-  color: #a1a8bd;
+  color: #343e5c;
   text-transform: uppercase;
 }
 
@@ -1207,6 +1202,17 @@ div[data-id="4"] {
   align-items: center;
   position: relative;
   margin-left: auto;
+}
+
+@media screen and (max-width: 850px) {
+  .search__sortBy {
+    width: 100%;
+    margin: 0;
+    justify-content: flex-start;
+  }
+  .search__typeSort {
+    margin-left: 20px;
+  }
 }
 
 .search__valueSort {
@@ -1229,7 +1235,7 @@ div[data-id="4"] {
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: -120px;
+  bottom: -155px;
   left: 0;
   background-color: white;
   transform: scaleY(0);
@@ -1252,7 +1258,7 @@ div[data-id="4"] {
   right: 25px;
 }
 
-.search__typeSort:hover > .search__paramasSort {
+.search__paramasSort-active {
   opacity: 1;
   display: flex;
   transform: scaleY(1);
@@ -1283,16 +1289,16 @@ div[data-id="4"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100%;
-  max-width: 700px;
+  min-height: 57px;
+  width: 680px;
   flex-wrap: wrap;
-  padding: 11px 0;
   border-right: 1px solid #e4e5e7;
   border-left: 1px solid #e4e5e7;
   box-sizing: border-box;
 }
 
 .search__labelKeywords {
+  min-height: 57px;
   width: 300px;
   display: flex;
   justify-content: center;
@@ -1345,8 +1351,15 @@ div[data-id="4"] {
   color: #b9bfd3;
 }
 
+@media screen and (max-width: 350px) {
+  .search__inpK {
+    width: 130px;
+  }
+}
+
 .search__labelPrice {
   width: 220px;
+  min-height: 57px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1408,7 +1421,8 @@ div[data-id="4"] {
 }
 
 .search__lebelcheck {
-  width: 170px;
+  width: 157px;
+  min-height: 57px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1428,10 +1442,11 @@ div[data-id="4"] {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: -2px;
-  left: -24px;
+  top: -4px;
+  left: -29px;
   width: 20px;
   height: 20px;
+  border: 2px solid #00e2aa;
   border-radius: 50%;
   background-color: #00e2aa;
   color: white;
@@ -1451,17 +1466,18 @@ div[data-id="4"] {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: -2px;
-  left: -24px;
+  top: -4px;
+  left: -29px;
   width: 20px;
   height: 20px;
+  border: 2px solid #e4e8f0;
   border-radius: 50%;
-  background-color: #00e2aa;
+  background-color: white;
   color: white;
 }
 
 .search__ship {
-  height: 100%;
+  min-height: 57px;
   display: flex;
   flex-wrap: wrap;
   width: 175px;
@@ -1473,7 +1489,7 @@ div[data-id="4"] {
 .search__titelShip {
   font-family: "Montserrat regular", "Arial", Sans-serif;
   font-size: 11px;
-  color: #a1a8bd;
+  color: #343e5c;
   text-transform: uppercase;
 }
 
@@ -1485,6 +1501,19 @@ div[data-id="4"] {
   align-items: center;
   position: relative;
   margin-left: auto;
+}
+
+@media screen and (max-width: 850px) {
+  .search__ship {
+    border-top: 1px solid #e4e8f0;
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+    justify-content: flex-start;
+  }
+  .search__contShips {
+    margin-left: 80px;
+  }
 }
 
 .search__areaship {
@@ -1500,7 +1529,7 @@ div[data-id="4"] {
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: -120px;
+  bottom: -155px;
   left: -54px;
   z-index: 800;
   transform: scaleY(0);
@@ -1522,7 +1551,7 @@ div[data-id="4"] {
   right: 25px;
 }
 
-.search__contShips:hover > .search__listAreasShips {
+.search__listAreasShips-active {
   opacity: 1;
   display: flex;
   transform: scaleY(1);
@@ -1547,6 +1576,40 @@ div[data-id="4"] {
 .search__liships:active {
   fill: #1ce226;
   color: #1ce226;
+}
+
+@media screen and (max-width: 1280px) {
+  .search__sotrBy {
+    order: 1;
+  }
+  .search__KAP {
+    order: 3;
+    width: 100%;
+    margin: 0;
+    border: none;
+    border-top: 1px solid #e4e8f0;
+    justify-content: flex-start;
+  }
+  .search__ship {
+    order: 2;
+  }
+  .search__labelKeywords {
+    justify-content: flex-start;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .search__labelKeywords, .search__labelPrice, .search__lebelcheck {
+    border-bottom: 1px solid #e4e8f0;
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+    justify-content: flex-start;
+  }
+  .search__titelCheck {
+    margin-left: 27px;
+  }
 }
 
 .left {
@@ -1597,6 +1660,14 @@ div[data-id="4"] {
 
 .firstLi:hover {
   background-color: #a8e3ee;
+}
+
+.test {
+  display: flex;
+  height: 20px;
+  width: 30%;
+  margin: 10px;
+  background-color: green;
 }
 
 .firstLi:not(:last-child) {

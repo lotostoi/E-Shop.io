@@ -1,5 +1,10 @@
 window.onload = function () {
     let d = document
+    
+
+    // *********************** Slider ************************************ //
+    // *********************** Slider ************************************ //
+    // *********************** Slider ************************************ //
     let count = 1
     d.querySelector('.slider').addEventListener('click', workClick)
 
@@ -26,7 +31,6 @@ window.onload = function () {
                         el.classList.add('bunnerActiv')
                         target.classList.add('checkActiv')
                         count = i + 1
-                        console.log(count)
                     }
                 })
             }
@@ -35,7 +39,6 @@ window.onload = function () {
                 if (count > [...d.querySelectorAll('.bunner')].length) {
                     count = 1
                 }
-                console.log(count)
                 d.querySelectorAll('.bunner').forEach(el => {
                     if (el.dataset['id'] == count) {
                         d.querySelectorAll('.bunner').forEach(el => {
@@ -60,6 +63,10 @@ window.onload = function () {
 
     }
 
+    //  ********************************Adept menu************************************ //
+    //  ********************************Adept menu************************************ //
+    //  ********************************Adept menu************************************ //
+
     d.querySelector('.menuTop__iconMemu').addEventListener('click', clickHendler)
 
     function clickHendler(evt) {
@@ -70,7 +77,6 @@ window.onload = function () {
             iconMenu.forEach((el, i) => {
                 iconMenu[i].classList.toggle('menuTop__line-activ')
             })
-            console.log(evt.target.parentNode);
         }
 
         if ((evt.target.className == "menuTop__line") || (evt.target.className == "menuTop__line menuTop__line-activ")) {
@@ -83,6 +89,30 @@ window.onload = function () {
             })
         }
 
+    }
+
+    // ************************* Drop menus from block search *************************//
+    // ************************* Drop menus from block search *************************//
+    // ************************* Drop menus from block search *************************//
+
+    d.querySelector('.search').addEventListener('click', workClick) 
+    
+    function workClick(evt) {
+        if (evt.target.parentNode.className === "search__typeSort") {
+            d.querySelector('.search__paramasSort').classList.toggle('search__paramasSort-active') 
+        }
+        if (evt.target.parentNode.className === "search__paramasSort search__paramasSort-active") {
+            d.querySelector('.search__valueSort').innerHTML = evt.target.innerHTML
+            d.querySelector('.search__paramasSort').classList.toggle('search__paramasSort-active') 
+        }
+
+        if (evt.target.parentNode.className === "search__contShips") {
+            d.querySelector('.search__listAreasShips').classList.toggle('search__listAreasShips-active') 
+        }
+        if (evt.target.parentNode.className === "search__listAreasShips search__listAreasShips-active") {
+            d.querySelector('.search__areaship').innerHTML = evt.target.innerHTML
+            d.querySelector('.search__listAreasShips').classList.toggle('search__listAreasShips-active')
+        }
     }
 
 }

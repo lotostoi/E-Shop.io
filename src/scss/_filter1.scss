@@ -1,9 +1,10 @@
 .search {
   width: 100%;
-  @include row-flex();
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   align-items: center;
-  min-height: 57px;
+ // min-height: 57px;
   border-radius: 5px;
   background-color: #fff;
 
@@ -315,7 +316,6 @@
     opacity: 1;
     display: flex;
     transform: scaleY(1);
-    // transform: sc;
   }
 
   &__liships {
