@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "browser-sync": "^2.26.7",
+    "git": "^0.1.5",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "normalize-scss": "^7.0.1",
