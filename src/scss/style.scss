@@ -51,7 +51,6 @@ body {
   font-family: $mr;
 }
 
-//@include debug(rgba(255, 217, 0, 0.425), #000);
 .setka {
   @include debug(rgba(240, 193, 241, 0.37), #000);
 }
@@ -94,7 +93,6 @@ body {
     min-height: 57px;
     display: flex;
     width: 245px;
-    // margin: 0 20px;
     flex-wrap: wrap;
     align-items: center;
     padding: 0 20px;
@@ -110,23 +108,12 @@ body {
 
   &__typeSort {
     height: 100%;
-    // background-color: orange;
     min-width: 120px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     position: relative;
     margin-left: auto;
-  }
-  @include to(850px) {
-    &__sortBy {
-      width: 100%;
-      margin: 0;
-      justify-content: flex-start;
-    }
-    &__typeSort {
-      margin-left: 20px;
-    }
   }
 
   &__valueSort {
@@ -176,7 +163,6 @@ body {
     opacity: 1;
     display: flex;
     transform: scaleY(1);
-    // transform: sc;
   }
 
   &__li {
@@ -236,11 +222,6 @@ body {
       font-family: $mr;
       font-size: 13px;
       color: #b9bfd3;
-    }
-  }
-  @include to(350px) {
-    &__inpK {
-      width: 130px;
     }
   }
 
@@ -374,20 +355,9 @@ body {
     margin-left: auto;
   }
 
-  @include to(850px) {
-    &__ship {
-      border-top: 1px solid $colBor;
-      width: 100%;
-      margin: 0;
-      padding: 0 20px;
-      justify-content: flex-start;
-    }
-    &__contShips {
-      margin-left: 80px;
-    }
-  }
-
   &__areaship {
+    width: 70px;
+    text-align: right;
     font-family: $mr;
     font-size: 11px;
     color: #343e5c;
@@ -462,6 +432,27 @@ body {
   }
 
   @include to(850px) {
+    &__sortBy {
+      width: 100%;
+      margin: 0;
+      justify-content: flex-start;
+    }
+    &__typeSort {
+      margin-left: 20px;
+    }
+
+    &__ship {
+      border-top: 1px solid $colBor;
+      width: 100%;
+      margin: 0;
+      padding: 0 20px;
+      justify-content: flex-start;
+    }
+
+    &__contShips {
+      margin-left: 55px;
+    }
+
     &__labelKeywords,
     &__labelPrice,
     &__lebelcheck {
@@ -475,16 +466,26 @@ body {
       margin-left: 27px;
     }
   }
+  @include to(350px) {
+    &__inpK {
+      width: 130px;
+    }
+  }
 }
 
 .left {
   display: flex;
   flex-wrap: wrap;
-  @include col();
-  margin: 0;
-  @include size(3.07);
+  width: 270px;
+  box-sizing: border-box;
   margin-top: 30px;
   flex-direction: column;
+}
+
+@include to(700px) {
+  .left {
+    width: 100%;
+  }
 }
 
 .first {
@@ -782,11 +783,17 @@ body {
 }
 
 .productsPage {
-  width: 74.4%;
+  width: calc(100% - 300px);
   display: flex;
-  margin: 30px 0 0 30px;
+  margin: 25px 0 0 30px;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+@include to(700px) {
+  .productsPage {
+    width: 100%;
+    margin: 25px 0 0 0;
+  }
 }
 
 .contItem {
@@ -798,7 +805,7 @@ body {
   background-color: #fff;
   padding: 35px 10px 44px 10px;
   border-radius: 5px;
-  margin-bottom: 9px;
+  margin: 5px;
 
   &__name,
   &__price {
@@ -843,6 +850,19 @@ body {
       background-color: #01071a;
       border: 2px solid #01071a;
     }
+  }
+}
+@include to(1260px) {
+  .contItem {
+    width: 44%;
+    margin: 1%;
+  }
+}
+
+@include to(900px) {
+  .contItem {
+    width: 85%;
+    //margin: 1%;
   }
 }
 

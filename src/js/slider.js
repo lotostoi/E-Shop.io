@@ -95,9 +95,9 @@ window.onload = function () {
     // ************************* Drop menus from block search *************************//
     // ************************* Drop menus from block search *************************//
 
-    d.querySelector('.search').addEventListener('click', workClick) 
-    
-    function workClick(evt) {
+    d.querySelector('.search').addEventListener('click', workClickk) 
+
+    function workClickk(evt) {
         if (evt.target.parentNode.className === "search__typeSort") {
             d.querySelector('.search__paramasSort').classList.toggle('search__paramasSort-active') 
         }
