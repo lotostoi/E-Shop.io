@@ -76,6 +76,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   padding: 50px 116px;
+
   @include to(1380px) {
     padding: 30px 25px;
   }
@@ -286,7 +287,7 @@ body {
     display: none;
   }
 
-  &__check:checked + &__titelCheck {
+  &__check:checked+&__titelCheck {
     &::before {
       content: "\2714";
       display: flex;
@@ -414,6 +415,7 @@ body {
     &__sotrBy {
       order: 1;
     }
+
     &__KAP {
       order: 3;
       width: 100%;
@@ -422,9 +424,11 @@ body {
       border-top: 1px solid $colBor;
       justify-content: flex-start;
     }
+
     &__ship {
       order: 2;
     }
+
     &__labelKeywords {
       justify-content: flex-start;
       margin-left: 20px;
@@ -437,6 +441,7 @@ body {
       margin: 0;
       justify-content: flex-start;
     }
+
     &__typeSort {
       margin-left: 20px;
     }
@@ -462,10 +467,12 @@ body {
       padding: 0 20px;
       justify-content: flex-start;
     }
+
     &__titelCheck {
       margin-left: 27px;
     }
   }
+
   @include to(350px) {
     &__inpK {
       width: 130px;
@@ -532,6 +539,7 @@ body {
   margin: 10px;
   background-color: green;
 }
+
 .firstLi:not(:last-child) {
   border-bottom: 1px solid $colBor;
 }
@@ -549,7 +557,7 @@ body {
     display: none;
   }
 
-  &__inputInstorage:checked ~ &__inStorage > &__contIcon {
+  &__inputInstorage:checked~&__inStorage>&__contIcon {
     &::before {
       content: "";
       display: block;
@@ -561,7 +569,7 @@ body {
     }
   }
 
-  &__inputCheck:checked ~ &__nameCheck > &__contIconB {
+  &__inputCheck:checked~&__nameCheck>&__contIconB {
     background-image: url("/img/Check\ Icon.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -694,7 +702,7 @@ body {
     display: none;
   }
 
-  &__inputCheck:checked ~ &__nameCheck > &__contIconB {
+  &__inputCheck:checked~&__nameCheck>&__contIconB {
     background-image: url("/img/Check\ Icon.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -769,7 +777,7 @@ body {
     margin-right: 15px;
   }
 
-  &__input:checked ~ &__label > &__contIcon {
+  &__input:checked~&__label>&__contIcon {
     &::before {
       content: "";
       display: block;
@@ -789,6 +797,7 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
 @include to(700px) {
   .productsPage {
     width: 100%;
@@ -802,7 +811,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 30%;
+  width: 29%;
   background-color: #fff;
   padding: 35px 10px 44px 10px;
   border-radius: 5px;
@@ -853,6 +862,7 @@ body {
     }
   }
 }
+
 @include to(1260px) {
   .contItem {
     width: 44%;
@@ -873,6 +883,7 @@ body {
     margin-bottom: 10px;
   }
 }
+
 @include to(600px) {
   .contItem {
     width: 100%;
@@ -903,8 +914,8 @@ body {
   min-height: 90px;
 }
 
-.page-item:first-child > button,
-.page-item:last-child > button {
+.page-item:first-child>button,
+.page-item:last-child>button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -923,7 +934,7 @@ body {
     background-color: rgb(190, 190, 216);
   }
 
-  &:active > button > img {
+  &:active>button>img {
     transform: scale(1.2);
   }
 }
@@ -936,7 +947,7 @@ body {
     background-color: rgb(190, 190, 216);
   }
 
-  &:active > button > img {
+  &:active>button>img {
     transform: scale(1.2);
   }
 }
@@ -949,7 +960,7 @@ body {
   min-height: 90px;
 }
 
-.page-item:not(:first-child):not(:last-child) > button {
+.page-item:not(:first-child):not(:last-child)>button {
   display: flex;
   border: none;
   outline: none;
@@ -988,6 +999,26 @@ body {
 .page-item:nth-last-child(2) {
   margin-right: auto;
 }
+
+
+@include to(700px) {
+
+  li.page-item:nth-child(5),
+  li.page-item:nth-child(6),
+  li.page-item:nth-child(7),
+  li.page-item:nth-child(8),
+  li.page-item:nth-child(9) {
+    display: none!important;
+  }
+
+  li.page-item:nth-child(4) {
+    margin-right: auto;
+  }
+
+
+
+}
+
 
 .bestSellers {
   width: 100%;

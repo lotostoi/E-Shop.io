@@ -1944,7 +1944,7 @@ div[data-id="4"] {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 30%;
+  width: 29%;
   background-color: #fff;
   padding: 35px 10px 44px 10px;
   border-radius: 5px;
@@ -2130,6 +2130,19 @@ div[data-id="4"] {
 
 .page-item:nth-last-child(2) {
   margin-right: auto;
+}
+
+@media screen and (max-width: 700px) {
+  li.page-item:nth-child(5),
+  li.page-item:nth-child(6),
+  li.page-item:nth-child(7),
+  li.page-item:nth-child(8),
+  li.page-item:nth-child(9) {
+    display: none !important;
+  }
+  li.page-item:nth-child(4) {
+    margin-right: auto;
+  }
 }
 
 .bestSellers {
