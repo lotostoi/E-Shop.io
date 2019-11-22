@@ -1927,7 +1927,7 @@ div[data-id="4"] {
   width: calc(100% - 300px);
   display: flex;
   margin: 25px 0 0 30px;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -1998,13 +1998,12 @@ div[data-id="4"] {
 @media screen and (max-width: 1260px) {
   .contItem {
     width: 44%;
-    margin: 1%;
   }
 }
 
 @media screen and (max-width: 900px) {
   .contItem {
-    width: 85%;
+    width: 100%;
   }
 }
 
@@ -2149,7 +2148,6 @@ div[data-id="4"] {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
   border-radius: 5px;
   margin-top: 50px;
 }
@@ -2166,6 +2164,7 @@ div[data-id="4"] {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1.1px;
+  background-color: #fff;
 }
 
 .bestSellers__contItems {
@@ -2182,11 +2181,47 @@ div[data-id="4"] {
   padding: 28px 10px 35px 10px;
   box-sizing: border-box;
   justify-content: space-between;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 960px) {
   .bestSellers__contItem {
     width: 50%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .bestSellers__contItems {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .bestSellers__titel {
+    border-radius: 5px;
+    margin-bottom: 2px;
+  }
+  .bestSellers__contItem {
+    border-radius: 5px;
+    width: 49.6%;
+    margin: 0;
+    margin-bottom: 10px;
+    border: none;
+    margin: 2px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .bestSellers__titel {
+    border-radius: 5px;
+  }
+  .bestSellers__contItem {
+    border-radius: 5px;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+    border: none;
+    margin: 5px 0;
   }
 }
 
@@ -2263,6 +2298,7 @@ div[data-id="4"] {
   font-size: 32px;
   font-weight: 400;
   justify-content: center;
+  text-align: center;
 }
 
 .reviews__p {
@@ -2274,6 +2310,7 @@ div[data-id="4"] {
   font-size: 16px;
   font-style: italic;
   margin-top: 15px;
+  text-align: center;
 }
 
 .reviews__contReviews {
@@ -2330,6 +2367,42 @@ div[data-id="4"] {
   line-height: 24px;
 }
 
+@media screen and (max-width: 1100px) {
+  .reviews__contReviews {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .reviews__h2 {
+    font-size: 22px;
+  }
+  .reviews__contReview {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .reviews__contImgAndName {
+    width: 100%;
+    justify-content: center;
+  }
+  .reviews__name {
+    width: 100px;
+  }
+  .reviews__text {
+    width: 100%;
+    margin-top: 10px;
+    color: #3a405b;
+    font-family: "Crimson Text - Roman";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
 .footer {
   width: 100%;
   display: flex;
@@ -2339,6 +2412,12 @@ div[data-id="4"] {
   flex-direction: column;
 }
 
+@media screen and (max-width: 850px) {
+  .footer {
+    padding: 0 20px;
+  }
+}
+
 .nav {
   width: 100%;
   display: flex;
@@ -2346,6 +2425,7 @@ div[data-id="4"] {
   padding: 62px 0;
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.507);
+  flex-wrap: wrap;
 }
 
 .nav__img {
@@ -2361,7 +2441,7 @@ div[data-id="4"] {
 }
 
 .nav__ul {
-  width: 33.13356%;
+  width: 387px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2386,7 +2466,7 @@ div[data-id="4"] {
 }
 
 .nav__socsety {
-  width: 10.27397%;
+  width: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2403,6 +2483,12 @@ div[data-id="4"] {
 
 .nav__icon:active {
   color: red;
+}
+
+@media screen and (max-width: 850px) {
+  .nav__ul {
+    display: none;
+  }
 }
 
 .foot {
@@ -2449,4 +2535,19 @@ div[data-id="4"] {
 
 .foot__a:active {
   color: red;
+}
+
+@media screen and (max-width: 850px) {
+  .foot {
+    flex-direction: column;
+  }
+  .foot__p {
+    width: 80%;
+    text-align: center;
+  }
+  .foot__ul {
+    width: 80%;
+    text-align: center;
+    margin-top: 20px;
+  }
 }
