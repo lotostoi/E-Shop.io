@@ -793,7 +793,7 @@ body {
 .productsPage {
   width: calc(100% - 300px);
   display: flex;
-  margin: 25px 0 0 30px;
+  margin: 30px 0 0 30px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -801,8 +801,8 @@ body {
 @include to(700px) {
   .productsPage {
     width: 100%;
-    margin: 25px 0 0 0;
     justify-content: space-between;
+    margin-left: 0;
   }
 }
 
@@ -815,7 +815,7 @@ body {
   background-color: #fff;
   padding: 35px 10px 44px 10px;
   border-radius: 5px;
-  margin: 5px;
+  margin-bottom: 10px;
 
   &__name,
   &__price {
@@ -865,7 +865,7 @@ body {
 
 @include to(1260px) {
   .contItem {
-    width: 44%;
+    width: 46%;
     // margin: 1%;
   }
 }
@@ -877,6 +877,7 @@ body {
 }
 
 @include to(700px) {
+
   .contItem {
     width: 45%;
     margin: 0;
