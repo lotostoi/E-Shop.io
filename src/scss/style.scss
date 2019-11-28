@@ -9,12 +9,14 @@ $colHov: red;
 $colAct: rgb(28, 226, 38);
 $colgre: #00e2aa;
 $colText: #1c1e23;
+$colBlue: #2754eb;
+$colBlueA: #8199e9;
 $widthBoby: 1168px;
 
 @mixin hovAct() {
   &:hover {
-    fill: $colHov;
-    color: $colHov;
+    fill: $colBlue;
+    color: $colBlue;
   }
 
   &:active {

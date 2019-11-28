@@ -33,12 +33,58 @@
                     <a href="#" class="menuTop__a">About Us</a>
                 </nav>
                 <div class="menuTop__contCart">
-                    <svg width="19" height="17" class="menuTop__CartSvg">
-                        <path
-                            d="M18.000,4.052 L17.000,7.040 C16.630,7.878 16.105,9.032 15.000,9.032 L5.360,9.032 L5.478,10.028 L18.000,10.028 L17.000,12.019 L4.352,12.019 L3.709,12.095 L2.522,2.061 L1.000,2.061 C0.448,2.061 -0.000,1.615 -0.000,1.066 C-0.000,0.515 0.352,0.008 0.905,0.008 L4.291,-0.006 L4.545,2.145 C4.670,2.096 4.812,2.061 5.000,2.061 L17.000,2.061 C18.105,2.061 18.000,2.953 18.000,4.052 ZM6.000,13.015 C7.105,13.015 8.000,13.906 8.000,15.007 C8.000,16.107 7.105,16.998 6.000,16.998 C4.895,16.998 4.000,16.107 4.000,15.007 C4.000,13.906 4.895,13.015 6.000,13.015 ZM14.000,13.015 C15.105,13.015 16.000,13.906 16.000,15.007 C16.000,16.107 15.105,16.998 14.000,16.998 C12.896,16.998 12.000,16.107 12.000,15.007 C12.000,13.906 12.896,13.015 14.000,13.015 Z" />
-                    </svg>
+                    <div class="menuTop__CartSvg">
+                        <svg width="19" height="17">
+                            <path
+                                d="M18.000,4.052 L17.000,7.040 C16.630,7.878 16.105,9.032 15.000,9.032 L5.360,9.032 L5.478,10.028 L18.000,10.028 L17.000,12.019 L4.352,12.019 L3.709,12.095 L2.522,2.061 L1.000,2.061 C0.448,2.061 -0.000,1.615 -0.000,1.066 C-0.000,0.515 0.352,0.008 0.905,0.008 L4.291,-0.006 L4.545,2.145 C4.670,2.096 4.812,2.061 5.000,2.061 L17.000,2.061 C18.105,2.061 18.000,2.953 18.000,4.052 ZM6.000,13.015 C7.105,13.015 8.000,13.906 8.000,15.007 C8.000,16.107 7.105,16.998 6.000,16.998 C4.895,16.998 4.000,16.107 4.000,15.007 C4.000,13.906 4.895,13.015 6.000,13.015 ZM14.000,13.015 C15.105,13.015 16.000,13.906 16.000,15.007 C16.000,16.107 15.105,16.998 14.000,16.998 C12.896,16.998 12.000,16.107 12.000,15.007 C12.000,13.906 12.896,13.015 14.000,13.015 Z" />
+                        </svg>
+                    </div>
                     <span class="menuTop__spanCart">Cart</span>
                     <span class="menuTop__countCart">0</span>
+                    <div class="contCartProducts">
+
+
+                        <div class="contCartProducts__contItem">
+                            <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct"
+                                class="contCartProducts__img">
+                            <span class="contCartProducts__name">Lorem ipsum dolor sit.</span>
+                            <span class="contCartProducts__price">$ 5.55</span>
+                            <span class="contCartProducts__quantity">12</span>
+                            <div class="contCartProducts__buttons">
+                                <button class="contCartProducts__add">&#9650</button>
+                                <button class="contCartProducts__del">&#9660</button>
+                            </div>
+                        </div>
+                        <div class="contCartProducts__contItem">
+                            <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct"
+                                class="contCartProducts__img">
+                            <span class="contCartProducts__name">Lorem ipsum dolor sit.</span>
+                            <span class="contCartProducts__price">$ 5.55</span>
+                            <span class="contCartProducts__quantity">12</span>
+                            <div class="contCartProducts__buttons">
+                                <button class="contCartProducts__add">&#9650</button>
+                                <button class="contCartProducts__del">&#9660</button>
+                            </div>
+                        </div>
+                        <div class="contCartProducts__contItem">
+                            <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct"
+                                class="contCartProducts__img">
+                            <span class="contCartProducts__name">Lorem ipsum dolor sit.</span>
+                            <span class="contCartProducts__price">$ 5.55</span>
+                            <span class="contCartProducts__quantity">12</span>
+                            <div class="contCartProducts__buttons">
+                                <button class="contCartProducts__add">&#9650</button>
+                                <button class="contCartProducts__del">&#9660</button>
+                            </div>
+                        </div>
+                        <div class="contCartProducts__rethult">
+                            <span class="contCartProducts__span">Итого:</span>
+                            <span class="contCartProducts__allSumm">$ 0</span>
+                            <span class="contCartProducts__allQuantity">0</span>
+                            <button class="contCartProducts__allClean">X</button>
+
+                        </div>
+                    </div>
                 </div>
                 <button class="menuTop__button">Sing in</button>
             </div>
@@ -134,344 +180,347 @@
                                 <li class="search__li" data-id='1'>new items</li>
                             </ul>
                         </div>
-                    </div>             
-                <div class="search__KAP">
-                    <label for="Keywords" class="search__labelKeywords">
-                        <span class="search__keywords">Keywords</span>
-                        <input type="text" class="search__inpK" placeholder="Tablet">
-                    </label>
-                    <label for="price" class="search__labelPrice">
-                        <span class="search__titelprice">Price</span>
-                        <input type="text" class="search__price" placeholder="10">
-                        <span class="search__def">-</span>
-                        <input type="text" class="search__price" placeholder="1000">
-                    </label>
-                    <div class="search__lebelcheck">
-                        <input type="checkbox" checked id="chek1" class="search__check">
-                        <label for="chek1" class="search__titelCheck">Free shoping</label>
+                    </div>
+                    <div class="search__KAP">
+                        <label for="Keywords" class="search__labelKeywords">
+                            <span class="search__keywords">Keywords</span>
+                            <input type="text" class="search__inpK" placeholder="Tablet">
+                        </label>
+                        <label for="price" class="search__labelPrice">
+                            <span class="search__titelprice">Price</span>
+                            <input type="text" class="search__price" placeholder="10">
+                            <span class="search__def">-</span>
+                            <input type="text" class="search__price" placeholder="1000">
+                        </label>
+                        <div class="search__lebelcheck">
+                            <input type="checkbox" checked id="chek1" class="search__check">
+                            <label for="chek1" class="search__titelCheck">Free shoping</label>
+                        </div>
+                    </div>
+                    <div class="search__ship">
+                        <span class="search__titelShip">Ship to:</span>
+                        <div class="search__contShips">
+                            <span class="search__areaship">USA </span>
+                            <i class="search__icon"></i>
+                            <ul class="search__listAreasShips">
+                                <li class="search__liships">USA</li>
+                                <li class="search__liships">France</li>
+                                <li class="search__liships">China</li>
+                                <li class="search__liships">Russia</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="search__ship">
-                    <span class="search__titelShip">Ship to:</span>
-                    <div class="search__contShips">
-                        <span class="search__areaship">USA </span>
-                        <i class="search__icon"></i>
-                        <ul class="search__listAreasShips">
-                            <li class="search__liships">USA</li>
-                            <li class="search__liships">France</li>
-                            <li class="search__liships">China</li>
-                            <li class="search__liships">Russia</li>
-                        </ul>
+                <aside class="left">
+                    <ul class="first">
+                        <li class="firstLi">Top Sales</li>
+                        <li class="firstLi">Brand Focus</li>
+                        <li class="firstLi">Hi-Tech</li>
+                        <li class="firstLi">Home</li>
+                        <li class="firstLi">Sale</li>
+                    </ul>
+                    <ul class="availableAndBrand">
+                        <li class="availableAndBrand__li">Available</li>
+                        <li class="availableAndBrand__li availableAndBrand__contInput">
+                            <input type="checkbox" class="availableAndBrand__inputInstorage" id="shop">
+                            <label for="shop" class="availableAndBrand__inStorage">
+                                <div class="availableAndBrand__contIcon"></div>
+                                In Storage
+                            </label>
+                            <span class="availableAndBrand__count">45</span>
+                        </li>
+                        <li class="availableAndBrand__li availableAndBrand__contInput">
+                            <input type="checkbox" class="availableAndBrand__inputInstorage" id="Online">
+
+                            <label for="Online" class="availableAndBrand__inStorage">
+                                <div class="availableAndBrand__contIcon"></div>
+                                In Online-Shop
+                            </label>
+                            <span class="availableAndBrand__count">12</span>
+                        </li>
+                        <li class="availableAndBrand__li">
+                            <span class="availableAndBrand__brands">Brands</span>
+                            <a href="#" class="availableAndBrand__abrands">All</a>
+                        </li>
+                        <li class="availableAndBrand__li">
+                            <input type="checkbox" class="availableAndBrand__inputCheck" id="Apple">
+                            <label for="Apple" class="availableAndBrand__nameCheck">
+                                <div class="availableAndBrand__contIconB"></div>Apple
+                            </label>
+                            <span class="availableAndBrand__quentlyBrands">32</span>
+                        </li>
+                        <li class="availableAndBrand__li">
+                            <input type="checkbox" class="availableAndBrand__inputCheck" id="JBL">
+                            <label for="JBL" class="availableAndBrand__nameCheck">
+                                <div class="availableAndBrand__contIconB"></div>JBL
+                            </label>
+                            <span class="availableAndBrand__quentlyBrands">14</span>
+                        </li>
+                        <li class="availableAndBrand__li">
+                            <input type="checkbox" class="availableAndBrand__inputCheck" id="Bose">
+                            <label for="Bose" class="availableAndBrand__nameCheck">
+                                <div class="availableAndBrand__contIconB"></div>Bose
+                            </label>
+                            <span class="availableAndBrand__quentlyBrands">5</span>
+                        </li>
+                        <li class="availableAndBrand__li">
+                            <input type="checkbox" class="availableAndBrand__inputCheck" id="Nest">
+                            <label for="Nest" class="availableAndBrand__nameCheck">
+                                <div class="availableAndBrand__contIconB"></div>Nest
+                            </label>
+                            <span class="availableAndBrand__quentlyBrands">3</span>
+                        </li>
+                    </ul>
+                    <ul class="condition">
+                        <li class="condition__li"> <span class="condition__brands">Condition</span>
+                            <a href="#" class="condition__abrands"> See All</a></li>
+                        <li class="condition__li">
+                            <input type="checkbox" class="condition__inputCheck" id="New">
+                            <label for="New" class="condition__nameCheck">
+                                <div class="condition__contIconB"></div>New
+                            </label>
+                        </li>
+                        <li class="condition__li">
+                            <input type="checkbox" class="condition__inputCheck" id="Manufacturer">
+                            <label for="Manufacturer" class="condition__nameCheck">
+                                <div class="condition__contIconB"></div>Manufacturer Refurbished
+                            </label>
+                        </li>
+                        <li class="condition__li">
+                            <input type="checkbox" class="condition__inputCheck" id="Seller">
+                            <label for="Seller" class="condition__nameCheck">
+                                <div class="condition__contIconB"></div>Seller Refurbished
+                            </label>
+                        </li>
+                        <li class="condition__li">
+                            <input type="checkbox" class="condition__inputCheck" id="Used">
+                            <label for="Used" class="condition__nameCheck">
+                                <div class="condition__contIconB"></div>Used
+                            </label>
+                        </li>
+                        <li class="condition__li">
+                            <input type="checkbox" class="condition__inputCheck" id="Parts">
+                            <label for="Parts" class="condition__nameCheck">
+                                <div class="condition__contIconB"></div> For Parts or not Working
+                            </label>
+                        </li>
+                    </ul>
+                    <div class="deliveryOptions">
+                        <span class="deliveryOptions__name">Delivery Options</span>
+                        <div class="deliveryOptions__contCheck">
+                            <input type="checkbox" class="deliveryOptions__input" id="free">
+                            <label for="free" class="deliveryOptions__label">
+                                <div class="deliveryOptions__contIcon"></div>
+                                Free
+                            </label>
+                        </div>
+                        <div class="deliveryOptions__contCheck">
+                            <input type="checkbox" class="deliveryOptions__input" id="price">
+                            <label for="price" class="deliveryOptions__label">
+                                <div class="deliveryOptions__contIcon"></div>
+                                $4.56
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+                <div class="productsPage">
+                    <div class="contItem">
+                        <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
+                        <span class="contItem__name">Lorem ipsum dolor sit.</span>
+                        <span class="contItem__price">$ 5.55</span>
+                        <button class="contItem__button">add to cart</button>
+                    </div>
+                    <div class="contItem">
+                        <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
+                        <span class="contItem__name">Lorem ipsum dolor sit.</span>
+                        <span class="contItem__price">$ 5.55</span>
+                        <button class="contItem__button">add to cart</button>
+                    </div>
+                    <div class="contItem">
+                        <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
+                        <span class="contItem__name">Lorem ipsum dolor sit.</span>
+                        <span class="contItem__price">$ 5.55</span>
+                        <button class="contItem__button">add to cart</button>
+                    </div>
+                    <div class="contItem">
+                        <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
+                        <span class="contItem__name">Lorem ipsum dolor sit.</span>
+                        <span class="contItem__price">$ 5.55</span>
+                        <button class="contItem__button">add to cart</button>
+                    </div>
+                    <div class="contItem">
+                        <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
+                        <span class="contItem__name">Lorem ipsum dolor sit.</span>
+                        <span class="contItem__price">$ 5.55</span>
+                        <button class="contItem__button">add to cart</button>
+                    </div>
+                    <div class="contItem">
+                        <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
+                        <span class="contItem__name">Lorem ipsum dolor sit.</span>
+                        <span class="contItem__price">$ 5.55</span>
+                        <button class="contItem__button">add to cart</button>
+                    </div>
+                    <div class="contItem">
+                        <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
+                        <span class="contItem__name">Lorem ipsum dolor sit.</span>
+                        <span class="contItem__price">$ 5.55</span>
+                        <button class="contItem__button">add to cart</button>
+                    </div>
+                    <div class="contItem">
+                        <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
+                        <span class="contItem__name">Lorem ipsum dolor sit.</span>
+                        <span class="contItem__price">$ 5.55</span>
+                        <button class="contItem__button">add to cart</button>
+                    </div>
+                    <div class="contItem">
+                        <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
+                        <span class="contItem__name">Lorem ipsum dolor sit.</span>
+                        <span class="contItem__price">$ 5.55</span>
+                        <button class="contItem__button">add to cart</button>
+                    </div>
+                    <div class="contItem">
+                        <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
+                        <span class="contItem__name">Lorem ipsum dolor </span>
+                        <span class="contItem__price">$ 5.55</span>
+                        <button class="contItem__button">add to cart</button>
+                    </div>
+                    <div class="contItem">
+                        <img src="build/img/Photo1.png" width="188" height="188" widthimgProduct="198" height="180"
+                            alt="imgProduct" class="contItem__img">
+                        <span class="contItem__name">Lorem ipsum dolor sit.</span>
+                        <span class="contItem__price">$ 5.55</span>
+                        <button class="contItem__button">add to cart</button>
+                    </div>
+                    <div class="contItem">
+                        <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
+                        <span class="contItem__name">Lorem ipsum dolor sit.</span>
+                        <span class="contItem__price">$ 5.55</span>
+                        <button class="contItem__button">add to cart</button>
                     </div>
                 </div>
-    </div>
-    <aside class="left">
-        <ul class="first">
-            <li class="firstLi">Top Sales</li>
-            <li class="firstLi">Brand Focus</li>
-            <li class="firstLi">Hi-Tech</li>
-            <li class="firstLi">Home</li>
-            <li class="firstLi">Sale</li>
-        </ul>
-        <ul class="availableAndBrand">
-            <li class="availableAndBrand__li">Available</li>
-            <li class="availableAndBrand__li availableAndBrand__contInput">
-                <input type="checkbox" class="availableAndBrand__inputInstorage" id="shop">
-                <label for="shop" class="availableAndBrand__inStorage">
-                    <div class="availableAndBrand__contIcon"></div>
-                    In Storage
-                </label>
-                <span class="availableAndBrand__count">45</span>
-            </li>
-            <li class="availableAndBrand__li availableAndBrand__contInput">
-                <input type="checkbox" class="availableAndBrand__inputInstorage" id="Online">
+                <nav class="navPagination">
+                    <ul class="paginationn">
+                        <li class="page-item">
+                            <button class="page-link" href="#" aria-label="Previous">
+                                <img src="build/img/Next_left.svg" alt="previos" class="page-link__img">
+                            </button>
+                        </li>
+                        <li class="page-item"><button class="page-link" href="#">1</button></li>
+                        <li class="page-item"><button class="page-link" href="#">2</button></li>
+                        <li class="page-item"><button class="page-link" href="#">3</button></li>
+                        <li class="page-item"><button class="page-link" href="#">4</button></li>
+                        <li class="page-item"><button class="page-link" href="#">5</button></li>
+                        <li class="page-item"><button class="page-link" href="#">6</button></li>
+                        <li class="page-item"><button class="page-link" href="#">7</button></li>
+                        <li class="page-item"><button class="page-link" href="#">8</button></li>
+                        <li class="page-item">
+                            <button class="page-link" href="#" aria-label="Next">
+                                <img src="build/img/Next_right.svg" alt="previos" class="page-link__img">
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+                <section class="bestSellers">
+                    <h3 class="bestSellers__titel">Best Sellers</h3>
+                    <div class="bestSellers__contItems">
+                        <div class="bestSellers__contItem">
+                            <img src="build/img/Photo2.png" width="188" height="188" alt="imgProduct"
+                                class="bestSellers__img">
+                            <spun class="bestSellers__name">Beanie</spun>
+                            <span class="bestSellers__color">Green</span>
+                            <p class="bestSellers__prices"><span class="bestSellers__old">$5.8</span><span
+                                    class="bestSellers__now">$3.8</span></p>
+                        </div>
+                        <div class="bestSellers__contItem">
+                            <img src="build/img/Photo2.png" width="188" height="188" alt="imgProduct"
+                                class="bestSellers__img">
+                            <spun class="bestSellers__name">T-Shirt With a Print</spun>
+                            <span class="bestSellers__color">Dark Blue</span>
+                            <p class="bestSellers__prices"><span class="bestSellers__old">$5.8</span><span
+                                    class="bestSellers__now">$3.8</span></p>
+                        </div>
+                        <div class="bestSellers__contItem">
+                            <img src="build/img/Photo2.png" width="188" height="188" alt="imgProduct"
+                                class="bestSellers__img">
+                            <spun class="bestSellers__name">Pile-Lined Hooded Jacket</spun>
+                            <span class="bestSellers__color">Dark Blue</span>
+                            <p class="bestSellers__prices"><span class="bestSellers__old">$5.8</span><span
+                                    class="bestSellers__now">$3.8</span></p>
+                        </div>
+                        <div class="bestSellers__contItem">
+                            <img src="build/img/Photo2.png" width="188" height="188" alt="imgProduct"
+                                class="bestSellers__img">
+                            <spun class="bestSellers__name">Trainers</spun>
+                            <span class="bestSellers__color">Space Grey</span>
+                            <p class="bestSellers__prices"><span class="bestSellers__old">$5.8</span><span
+                                    class="bestSellers__now">$3.8</span></p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="reviews">
+                <h2 class="reviews__h2">What Our Customers Have to Say</h2>
+                <p class="reviews__p">Couple of Words About This Stories Section</p>
+                <div class="reviews__contReviews">
+                    <div class="reviews__contReview">
+                        <div class="reviews__contImgAndName">
+                            <img src="build/img/ather1.png" width="40" height="40" alt="fotoAther" class="reviews__img">
+                            <p class="reviews__nameJob"><span class="reviews__name">Celia Fields</span><span
+                                    class="reviews__job">UX Expert</span></p>
+                        </div>
+                        <p class="reviews__text">This I have produced as a scantling of Jack’s great eloquence and the
+                            force of his reasoning upon such abstruse matters.</p>
 
-                <label for="Online" class="availableAndBrand__inStorage">
-                    <div class="availableAndBrand__contIcon"></div>
-                    In Online-Shop
-                </label>
-                <span class="availableAndBrand__count">12</span>
-            </li>
-            <li class="availableAndBrand__li">
-                <span class="availableAndBrand__brands">Brands</span>
-                <a href="#" class="availableAndBrand__abrands">All</a>
-            </li>
-            <li class="availableAndBrand__li">
-                <input type="checkbox" class="availableAndBrand__inputCheck" id="Apple">
-                <label for="Apple" class="availableAndBrand__nameCheck">
-                    <div class="availableAndBrand__contIconB"></div>Apple
-                </label>
-                <span class="availableAndBrand__quentlyBrands">32</span>
-            </li>
-            <li class="availableAndBrand__li">
-                <input type="checkbox" class="availableAndBrand__inputCheck" id="JBL">
-                <label for="JBL" class="availableAndBrand__nameCheck">
-                    <div class="availableAndBrand__contIconB"></div>JBL
-                </label>
-                <span class="availableAndBrand__quentlyBrands">14</span>
-            </li>
-            <li class="availableAndBrand__li">
-                <input type="checkbox" class="availableAndBrand__inputCheck" id="Bose">
-                <label for="Bose" class="availableAndBrand__nameCheck">
-                    <div class="availableAndBrand__contIconB"></div>Bose
-                </label>
-                <span class="availableAndBrand__quentlyBrands">5</span>
-            </li>
-            <li class="availableAndBrand__li">
-                <input type="checkbox" class="availableAndBrand__inputCheck" id="Nest">
-                <label for="Nest" class="availableAndBrand__nameCheck">
-                    <div class="availableAndBrand__contIconB"></div>Nest
-                </label>
-                <span class="availableAndBrand__quentlyBrands">3</span>
-            </li>
-        </ul>
-        <ul class="condition">
-            <li class="condition__li"> <span class="condition__brands">Condition</span>
-                <a href="#" class="condition__abrands"> See All</a></li>
-            <li class="condition__li">
-                <input type="checkbox" class="condition__inputCheck" id="New">
-                <label for="New" class="condition__nameCheck">
-                    <div class="condition__contIconB"></div>New
-                </label>
-            </li>
-            <li class="condition__li">
-                <input type="checkbox" class="condition__inputCheck" id="Manufacturer">
-                <label for="Manufacturer" class="condition__nameCheck">
-                    <div class="condition__contIconB"></div>Manufacturer Refurbished
-                </label>
-            </li>
-            <li class="condition__li">
-                <input type="checkbox" class="condition__inputCheck" id="Seller">
-                <label for="Seller" class="condition__nameCheck">
-                    <div class="condition__contIconB"></div>Seller Refurbished
-                </label>
-            </li>
-            <li class="condition__li">
-                <input type="checkbox" class="condition__inputCheck" id="Used">
-                <label for="Used" class="condition__nameCheck">
-                    <div class="condition__contIconB"></div>Used
-                </label>
-            </li>
-            <li class="condition__li">
-                <input type="checkbox" class="condition__inputCheck" id="Parts">
-                <label for="Parts" class="condition__nameCheck">
-                    <div class="condition__contIconB"></div> For Parts or not Working
-                </label>
-            </li>
-        </ul>
-        <div class="deliveryOptions">
-            <span class="deliveryOptions__name">Delivery Options</span>
-            <div class="deliveryOptions__contCheck">
-                <input type="checkbox" class="deliveryOptions__input" id="free">
-                <label for="free" class="deliveryOptions__label">
-                    <div class="deliveryOptions__contIcon"></div>
-                    Free
-                </label>
-            </div>
-            <div class="deliveryOptions__contCheck">
-                <input type="checkbox" class="deliveryOptions__input" id="price">
-                <label for="price" class="deliveryOptions__label">
-                    <div class="deliveryOptions__contIcon"></div>
-                    $4.56
-                </label>
-            </div>
-        </div>
-    </aside>
-    <div class="productsPage">
-       <!--  <div class="contItem">
-            <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
-            <span class="contItem__name">Lorem ipsum dolor sit.</span>
-            <span class="contItem__price">$ 5.55</span>
-            <button class="contItem__button">add to cart</button>
-        </div>
-        <div class="contItem">
-            <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
-            <span class="contItem__name">Lorem ipsum dolor sit.</span>
-            <span class="contItem__price">$ 5.55</span>
-            <button class="contItem__button">add to cart</button>
-        </div>
-        <div class="contItem">
-            <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
-            <span class="contItem__name">Lorem ipsum dolor sit.</span>
-            <span class="contItem__price">$ 5.55</span>
-            <button class="contItem__button">add to cart</button>
-        </div>
-        <div class="contItem">
-            <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
-            <span class="contItem__name">Lorem ipsum dolor sit.</span>
-            <span class="contItem__price">$ 5.55</span>
-            <button class="contItem__button">add to cart</button>
-        </div>
-        <div class="contItem">
-            <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
-            <span class="contItem__name">Lorem ipsum dolor sit.</span>
-            <span class="contItem__price">$ 5.55</span>
-            <button class="contItem__button">add to cart</button>
-        </div>
-        <div class="contItem">
-            <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
-            <span class="contItem__name">Lorem ipsum dolor sit.</span>
-            <span class="contItem__price">$ 5.55</span>
-            <button class="contItem__button">add to cart</button>
-        </div>
-        <div class="contItem">
-            <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
-            <span class="contItem__name">Lorem ipsum dolor sit.</span>
-            <span class="contItem__price">$ 5.55</span>
-            <button class="contItem__button">add to cart</button>
-        </div>
-        <div class="contItem">
-            <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
-            <span class="contItem__name">Lorem ipsum dolor sit.</span>
-            <span class="contItem__price">$ 5.55</span>
-            <button class="contItem__button">add to cart</button>
-        </div>
-        <div class="contItem">
-            <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
-            <span class="contItem__name">Lorem ipsum dolor sit.</span>
-            <span class="contItem__price">$ 5.55</span>
-            <button class="contItem__button">add to cart</button>
-        </div>
-        <div class="contItem">
-            <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
-            <span class="contItem__name">Lorem ipsum dolor </span>
-            <span class="contItem__price">$ 5.55</span>
-            <button class="contItem__button">add to cart</button>
-        </div>
-        <div class="contItem">
-            <img src="build/img/Photo1.png" width="188" height="188" widthimgProduct="198" height="180" alt="imgProduct"
-                class="contItem__img">
-            <span class="contItem__name">Lorem ipsum dolor sit.</span>
-            <span class="contItem__price">$ 5.55</span>
-            <button class="contItem__button">add to cart</button>
-        </div>
-        <div class="contItem">
-            <img src="build/img/Photo1.png" width="198" height="180" alt="imgProduct" class="contItem__img">
-            <span class="contItem__name">Lorem ipsum dolor sit.</span>
-            <span class="contItem__price">$ 5.55</span>
-            <button class="contItem__button">add to cart</button>
-        </div> -->
-
-    </div>
-    <nav class="navPagination">
-        <ul class="paginationn">
-            <li class="page-item">
-                <button class="page-link" href="#" aria-label="Previous">
-                    <img src="build/img/Next_left.svg" alt="previos" class="page-link__img">
-                </button>
-            </li>
-            <li class="page-item"><button class="page-link" href="#">1</button></li>
-            <li class="page-item"><button class="page-link" href="#">2</button></li>
-            <li class="page-item"><button class="page-link" href="#">3</button></li>
-            <li class="page-item"><button class="page-link" href="#">4</button></li>
-            <li class="page-item"><button class="page-link" href="#">5</button></li>
-            <li class="page-item"><button class="page-link" href="#">6</button></li>
-            <li class="page-item"><button class="page-link" href="#">7</button></li>
-            <li class="page-item"><button class="page-link" href="#">8</button></li>
-            <li class="page-item">
-                <button class="page-link" href="#" aria-label="Next">
-                    <img src="build/img/Next_right.svg" alt="previos" class="page-link__img">
-                </button>
-            </li>
-        </ul>
-    </nav>
-    <section class="bestSellers">
-        <h3 class="bestSellers__titel">Best Sellers</h3>
-        <div class="bestSellers__contItems">
-            <div class="bestSellers__contItem">
-                <img src="build/img/Photo2.png" width="188" height="188" alt="imgProduct" class="bestSellers__img">
-                <spun class="bestSellers__name">Beanie</spun>
-                <span class="bestSellers__color">Green</span>
-                <p class="bestSellers__prices"><span class="bestSellers__old">$5.8</span><span
-                        class="bestSellers__now">$3.8</span></p>
-            </div>
-            <div class="bestSellers__contItem">
-                <img src="build/img/Photo2.png" width="188" height="188" alt="imgProduct" class="bestSellers__img">
-                <spun class="bestSellers__name">T-Shirt With a Print</spun>
-                <span class="bestSellers__color">Dark Blue</span>
-                <p class="bestSellers__prices"><span class="bestSellers__old">$5.8</span><span
-                        class="bestSellers__now">$3.8</span></p>
-            </div>
-            <div class="bestSellers__contItem">
-                <img src="build/img/Photo2.png" width="188" height="188" alt="imgProduct" class="bestSellers__img">
-                <spun class="bestSellers__name">Pile-Lined Hooded Jacket</spun>
-                <span class="bestSellers__color">Dark Blue</span>
-                <p class="bestSellers__prices"><span class="bestSellers__old">$5.8</span><span
-                        class="bestSellers__now">$3.8</span></p>
-            </div>
-            <div class="bestSellers__contItem">
-                <img src="build/img/Photo2.png" width="188" height="188" alt="imgProduct" class="bestSellers__img">
-                <spun class="bestSellers__name">Trainers</spun>
-                <span class="bestSellers__color">Space Grey</span>
-                <p class="bestSellers__prices"><span class="bestSellers__old">$5.8</span><span
-                        class="bestSellers__now">$3.8</span></p>
-            </div>
-        </div>
-    </section>
-    </section>
-    <section class="reviews">
-        <h2 class="reviews__h2">What Our Customers Have to Say</h2>
-        <p class="reviews__p">Couple of Words About This Stories Section</p>
-        <div class="reviews__contReviews">
-            <div class="reviews__contReview">
-                <div class="reviews__contImgAndName">
-                    <img src="build/img/ather1.png" width="40" height="40" alt="fotoAther" class="reviews__img">
-                    <p class="reviews__nameJob"><span class="reviews__name">Celia Fields</span><span
-                            class="reviews__job">UX Expert</span></p>
+                    </div>
+                    <div class="reviews__contReview">
+                        <div class="reviews__contImgAndName">
+                            <img src="build/img/ather2.png" width="40" height="40" alt="fotoAther" class="reviews__img">
+                            <p class="reviews__nameJob"><span class="reviews__name">Alexander Lee</span><span
+                                    class="reviews__job">Founder</span></p>
+                        </div>
+                        <p class="reviews__text">Looking cautiously round, to ascer- tain that they were not overheard,
+                            the two hags cowered nearer to the fire, and chuckled heartily.</p>
+                    </div>
+                    <div class="reviews__contReview">
+                        <div class="reviews__contImgAndName">
+                            <img src="build/img/ather3.png" width="40" height="40" alt="fotoAther" class="reviews__img">
+                            <p class="reviews__nameJob"><span class="reviews__name" Lenora Sandoval>Lenora
+                                    Sandoval</span><span class="reviews__job">Product Manager</span></p>
+                        </div>
+                        <p class="reviews__text">This sounded a very good reason, and Alice was quite pleased to know
+                            it. 'I never thought of that before!'
+                            she said.</p>
+                    </div>
                 </div>
-                <p class="reviews__text">This I have produced as a scantling of Jack’s great eloquence and the
-                    force of his reasoning upon such abstruse matters.</p>
-
+            </section>
+        </main>
+        <footer class="footer">
+            <nav class="nav">
+                <a href="# " class="footer__a"><img src="/build/img/logo.svg" alt="imglogo" class="footer__img"></a>
+                <ul class="nav__ul">
+                    <li class="nav__li"><a href="#" class="nav__ali">home</a></li>
+                    <li class="nav__li"><a href="#" class="nav__ali">Shop</a></li>
+                    <li class="nav__li"><a href="#" class="nav__ali">Team</a></li>
+                    <li class="nav__li"><a href="#" class="nav__ali">About Us</a></li>
+                    <li class="nav__li"><a href="#" class="nav__ali">Contacts</a></li>
+                </ul>
+                <ul class="nav__socsety">
+                    <li class="nav__liIcon"><a href="#" class="nav__aIcon"><i class="icon-twitter nav__icon"></i></a>
+                    </li>
+                    <li class="nav__liIcon"><a href="#" class="nav__aIcon"><i class="icon-facebook nav__icon"></i></a>
+                    </li>
+                    <li class="nav__liIcon"><a href="#" class="nav__aIcon"><i class="icon-gplus nav__icon"></i></a></li>
+                </ul>
+            </nav>
+            <div class="foot">
+                <p class="foot__p">She gave my mother such a turn, that I have always been convinced I am indebted to
+                    Miss Betsey for having been born on a Friday.</p>
+                <ul class="foot__ul">
+                    <li class="foot__li"><a href="#" class="foot__a">Privacy Policy</a></a></li>
+                    <li class="foot__li"><a href="#" class="foot__a">Terms and Conditions</a></a></li>
+                </ul>
             </div>
-            <div class="reviews__contReview">
-                <div class="reviews__contImgAndName">
-                    <img src="build/img/ather2.png" width="40" height="40" alt="fotoAther" class="reviews__img">
-                    <p class="reviews__nameJob"><span class="reviews__name">Alexander Lee</span><span
-                            class="reviews__job">Founder</span></p>
-                </div>
-                <p class="reviews__text">Looking cautiously round, to ascer- tain that they were not overheard,
-                    the two hags cowered nearer to the fire, and chuckled heartily.</p>
-            </div>
-            <div class="reviews__contReview">
-                <div class="reviews__contImgAndName">
-                    <img src="build/img/ather3.png" width="40" height="40" alt="fotoAther" class="reviews__img">
-                    <p class="reviews__nameJob"><span class="reviews__name" Lenora Sandoval>Lenora
-                            Sandoval</span><span class="reviews__job">Product Manager</span></p>
-                </div>
-                <p class="reviews__text">This sounded a very good reason, and Alice was quite pleased to know
-                    it. 'I never thought of that before!'
-                    she said.</p>
-            </div>
-        </div>
-    </section>
-    </main>
-    <footer class="footer">
-        <nav class="nav">
-            <a href="# " class="footer__a"><img src="/build/img/logo.svg" alt="imglogo" class="footer__img"></a>
-            <ul class="nav__ul">
-                <li class="nav__li"><a href="#" class="nav__ali">home</a></li>
-                <li class="nav__li"><a href="#" class="nav__ali">Shop</a></li>
-                <li class="nav__li"><a href="#" class="nav__ali">Team</a></li>
-                <li class="nav__li"><a href="#" class="nav__ali">About Us</a></li>
-                <li class="nav__li"><a href="#" class="nav__ali">Contacts</a></li>
-            </ul>
-            <ul class="nav__socsety">
-                <li class="nav__liIcon"><a href="#" class="nav__aIcon"><i class="icon-twitter nav__icon"></i></a>
-                </li>
-                <li class="nav__liIcon"><a href="#" class="nav__aIcon"><i class="icon-facebook nav__icon"></i></a>
-                </li>
-                <li class="nav__liIcon"><a href="#" class="nav__aIcon"><i class="icon-gplus nav__icon"></i></a></li>
-            </ul>
-        </nav>
-        <div class="foot">
-            <p class="foot__p">She gave my mother such a turn, that I have always been convinced I am indebted to
-                Miss Betsey for having been born on a Friday.</p>
-            <ul class="foot__ul">
-                <li class="foot__li"><a href="#" class="foot__a">Privacy Policy</a></a></li>
-                <li class="foot__li"><a href="#" class="foot__a">Terms and Conditions</a></a></li>
-            </ul>
-        </div>
-    </footer>
+        </footer>
     </div>
     <script src='./src/js/slider.js'></script>
 </body>

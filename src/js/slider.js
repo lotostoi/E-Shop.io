@@ -1,6 +1,53 @@
 window.onload = function () {
     let d = document
 
+    //  ********************************Adept menu************************************ //
+    //  ********************************Adept menu************************************ //
+    //  ********************************Adept menu************************************ //
+
+    d.querySelector('.menuTop__iconMemu').addEventListener('click', clickHendler)
+
+    function clickHendler(evt) {
+        if ((evt.target.className == "menuTop__iconMemu") || (evt.target.className == "menuTop__iconMemu menuTop__iconMemu-activ")) {
+            evt.target.classList.toggle('menuTop__iconMemu-activ')
+            d.querySelector('.menuTop__nav').classList.toggle('menuTop__nav-activ')
+            let iconMenu = d.querySelectorAll('.menuTop__line')
+            iconMenu.forEach((el, i) => {
+                iconMenu[i].classList.toggle('menuTop__line-activ')
+            })
+            d.querySelector('.menuTop__nav').style.zIndex = 500
+            d.querySelector('.contCartProducts').style.zIndex = 450
+        }
+
+        if ((evt.target.className == "menuTop__line") || (evt.target.className == "menuTop__line menuTop__line-activ")) {
+            let par = evt.target.parentNode
+            par.classList.toggle('menuTop__iconMemu-activ')
+            d.querySelector('.menuTop__nav').classList.toggle('menuTop__nav-activ')
+            let iconMenu = d.querySelectorAll('.menuTop__line')
+            iconMenu.forEach((el, i) => {
+                iconMenu[i].classList.toggle('menuTop__line-activ')
+            })
+            d.querySelector('.menuTop__nav').style.zIndex = 500
+            d.querySelector('.contCartProducts').style.zIndex = 450
+        }
+
+    }
+
+    // ************************* Open cart and close catr *****************************//
+    // ************************* Open cart and close catr *****************************//
+    // ************************* Open cart and close catr *****************************//
+
+    d.querySelector('.menuTop__CartSvg').addEventListener('click', openCart)
+
+    function openCart() {
+        d.querySelector('.menuTop__CartSvg').classList.toggle('menuTop__CartSvg-active')
+        d.querySelector('.contCartProducts').classList.toggle('contCartProducts-active')
+
+        d.querySelector('.menuTop__nav').style.zIndex = 450
+        d.querySelector('.contCartProducts').style.zIndex = 500
+
+    }
+
 
     // *********************** Slider ************************************ //
     // *********************** Slider ************************************ //
@@ -63,6 +110,7 @@ window.onload = function () {
 
     }
 
+
     //  ********************************Adept menu************************************ //
     //  ********************************Adept menu************************************ //
     //  ********************************Adept menu************************************ //
@@ -90,6 +138,13 @@ window.onload = function () {
         }
 
     }
+
+    // ************************* Open cart and close catr *****************************//
+    // ************************* Open cart and close catr *****************************//
+    // ************************* Open cart and close catr *****************************//
+
+
+
 
     // ************************* Drop menus from block search *************************//
     // ************************* Drop menus from block search *************************//
@@ -137,7 +192,7 @@ window.onload = function () {
             this.ship = ship;
             this.img = img
         }
-        render () {
+        render() {
             return `<div class="contItem">
                         <img src="${this.img}" width="198" height="180" alt="imgProduct" class="contItem__img">
                         <span class="contItem__name">${this.name}</span>
@@ -151,58 +206,53 @@ window.onload = function () {
         constructor(className) {
             this.className = className;
             this.arrElems = [];
-        } 
-        fetchProduct () {
+        }
+        fetchProduct() {
             var xhr
             if (window.XMLHttpRequest) {
-              xhr = new XMLHttpRequest()
-            } else if (window.ActiveXObject) {          
-              xhr = new ActiveXObject("Microsoft.XMLHTTP")
+                xhr = new XMLHttpRequest()
+            } else if (window.ActiveXObject) {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP")
             }
-            xhr.open('GET', 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/catalogData.json', true)
+            xhr.open('GET', 'http://localhost/jsonFiles/responses/catalogData.json', true)
             xhr.send();
-             xhr.onreadystatechange = function () {
+            xhr.onreadystatechange = function () {
                 if (xhr.readyState === XMLHttpRequest.DONE) {
-                console.log(xhr.responseText)
+                    console.log(xhr.responseText)
                 }
-              } 
-
-
-
-
-
+            }
 
             this.arrElems = [
-                {name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free' , img: "build/img/Photo1.png"},
-                {name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free' , img: "build/img/Photo1.png"},
-                {name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free' , img: "build/img/Photo1.png"},
-                {name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free' , img: "build/img/Photo1.png"},
-                {name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free' , img: "build/img/Photo1.png"},
-                {name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free' , img: "build/img/Photo1.png"},
-                {name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free' , img: "build/img/Photo1.png"},
-                {name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free' , img: "build/img/Photo1.png"},
-                {name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free' , img: "build/img/Photo1.png"},
-                {name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free' , img: "build/img/Photo1.png"},
-                {name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free' , img: "build/img/Photo1.png"},
-                {name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free' , img: "build/img/Photo1.png"}
-            ] 
+                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
+                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
+                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
+                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
+                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
+                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
+                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
+                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
+                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
+                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
+                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
+                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" }
+            ]
         }
-        render () {
-             let listProduct=''
-            for (let i=0; i < this.arrElems.length; i++) {
-                let Product = new product (this.arrElems[i].name+(i+1),
-                                           this.arrElems[i].price,
-                                           this.arrElems[i].brand,
-                                           this.arrElems[i].country,
-                                           this.arrElems[i].ship,
-                                           this.arrElems[i].img) 
-                listProduct +=  Product.render()
+        render() {
+            let listProduct = ''
+            for (let i = 0; i < this.arrElems.length; i++) {
+                let Product = new product(this.arrElems[i].name + (i + 1),
+                    this.arrElems[i].price,
+                    this.arrElems[i].brand,
+                    this.arrElems[i].country,
+                    this.arrElems[i].ship,
+                    this.arrElems[i].img)
+                listProduct += Product.render()
             }
-           d.querySelector(this.className).innerHTML = listProduct 
+            d.querySelector(this.className).innerHTML = listProduct
         }
     }
 
-    let pageShop = new contProduct ('.productsPage')
+    let pageShop = new contProduct('.productsPage')
     pageShop.fetchProduct()
     pageShop.render()
     console.log(pageShop)
