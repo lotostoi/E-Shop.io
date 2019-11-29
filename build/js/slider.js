@@ -7,29 +7,18 @@ window.onload = function () {
 
     d.querySelector('.menuTop__iconMemu').addEventListener('click', clickHendler)
 
-    function clickHendler(evt) {
-        if ((evt.target.className == "menuTop__iconMemu") || (evt.target.className == "menuTop__iconMemu menuTop__iconMemu-activ")) {
-            evt.target.classList.toggle('menuTop__iconMemu-activ')
-            d.querySelector('.menuTop__nav').classList.toggle('menuTop__nav-activ')
-            let iconMenu = d.querySelectorAll('.menuTop__line')
-            iconMenu.forEach((el, i) => {
-                iconMenu[i].classList.toggle('menuTop__line-activ')
-            })
-            d.querySelector('.menuTop__nav').style.zIndex = 500
-            d.querySelector('.contCartProducts').style.zIndex = 450
-        }
+    function clickHendler() {
 
-        if ((evt.target.className == "menuTop__line") || (evt.target.className == "menuTop__line menuTop__line-activ")) {
-            let par = evt.target.parentNode
-            par.classList.toggle('menuTop__iconMemu-activ')
-            d.querySelector('.menuTop__nav').classList.toggle('menuTop__nav-activ')
-            let iconMenu = d.querySelectorAll('.menuTop__line')
-            iconMenu.forEach((el, i) => {
-                iconMenu[i].classList.toggle('menuTop__line-activ')
-            })
-            d.querySelector('.menuTop__nav').style.zIndex = 500
-            d.querySelector('.contCartProducts').style.zIndex = 450
-        }
+        d.querySelector('.menuTop__nav').classList.toggle('menuTop__nav-activ')
+        d.querySelector('.menuTop__iconMemu').classList.toggle('menuTop__iconMemu-activ')
+        let iconMenu = d.querySelectorAll('.menuTop__line')
+        iconMenu.forEach((el, i) => {
+            iconMenu[i].classList.toggle('menuTop__line-activ')
+        }) 
+        // close cart
+        d.querySelector('.menuTop__CartSvg').classList.remove('menuTop__CartSvg-active')
+        d.querySelector('.contCartProducts').classList.remove('contCartProducts-active')
+
 
     }
 
@@ -43,8 +32,13 @@ window.onload = function () {
         d.querySelector('.menuTop__CartSvg').classList.toggle('menuTop__CartSvg-active')
         d.querySelector('.contCartProducts').classList.toggle('contCartProducts-active')
 
-        d.querySelector('.menuTop__nav').style.zIndex = 450
-        d.querySelector('.contCartProducts').style.zIndex = 500
+        // close adapt menu
+        d.querySelector('.menuTop__nav').classList.remove('menuTop__nav-activ')
+        d.querySelector('.menuTop__iconMemu').classList.remove('menuTop__iconMemu-activ')
+        let iconMenu = d.querySelectorAll('.menuTop__line')
+        iconMenu.forEach((el, i) => {
+            iconMenu[i].classList.remove('menuTop__line-activ')
+        }) 
 
     }
 
@@ -110,42 +104,6 @@ window.onload = function () {
 
     }
 
-
-    //  ********************************Adept menu************************************ //
-    //  ********************************Adept menu************************************ //
-    //  ********************************Adept menu************************************ //
-
-    d.querySelector('.menuTop__iconMemu').addEventListener('click', clickHendler)
-
-    function clickHendler(evt) {
-        if ((evt.target.className == "menuTop__iconMemu") || (evt.target.className == "menuTop__iconMemu menuTop__iconMemu-activ")) {
-            evt.target.classList.toggle('menuTop__iconMemu-activ')
-            d.querySelector('.menuTop__nav').classList.toggle('menuTop__nav-activ')
-            let iconMenu = d.querySelectorAll('.menuTop__line')
-            iconMenu.forEach((el, i) => {
-                iconMenu[i].classList.toggle('menuTop__line-activ')
-            })
-        }
-
-        if ((evt.target.className == "menuTop__line") || (evt.target.className == "menuTop__line menuTop__line-activ")) {
-            let par = evt.target.parentNode
-            par.classList.toggle('menuTop__iconMemu-activ')
-            d.querySelector('.menuTop__nav').classList.toggle('menuTop__nav-activ')
-            let iconMenu = d.querySelectorAll('.menuTop__line')
-            iconMenu.forEach((el, i) => {
-                iconMenu[i].classList.toggle('menuTop__line-activ')
-            })
-        }
-
-    }
-
-    // ************************* Open cart and close catr *****************************//
-    // ************************* Open cart and close catr *****************************//
-    // ************************* Open cart and close catr *****************************//
-
-
-
-
     // ************************* Drop menus from block search *************************//
     // ************************* Drop menus from block search *************************//
     // ************************* Drop menus from block search *************************//
@@ -182,7 +140,6 @@ window.onload = function () {
     let ship = [] //ships list
     let img = [] // img list
 
-
     class product {
         constructor(title, price, brand, country, ship, img) {
             this.name = title;
@@ -207,53 +164,44 @@ window.onload = function () {
             this.className = className;
             this.arrElems = [];
         }
-        fetchProduct() {
-            var xhr
+
+        fetchProduct(url,callback) {
+            var xhr = null
+            let arr = []
+            let context = this
             if (window.XMLHttpRequest) {
                 xhr = new XMLHttpRequest()
             } else if (window.ActiveXObject) {
-                xhr = new ActiveXObject("Microsoft.XMLHTTP")
+                xhr = new ActiveXObject('Microsoft.XMLHTTP')
             }
-            xhr.open('GET', 'http://localhost/jsonFiles/responses/catalogData.json', true)
-            xhr.send();
-            xhr.onreadystatechange = function () {
+            xhr.open('GET', url, true)
+            xhr.send()
+            xhr.onreadystatechange = function () {              
                 if (xhr.readyState === XMLHttpRequest.DONE) {
-                    console.log(xhr.responseText)
+                    let objProduct = JSON.parse(xhr.responseText)
+                    objProduct.forEach(el => {
+                        arr.push(el)
+                    })
+                    callback.call(context,arr)
                 }
             }
 
-            this.arrElems = [
-                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
-                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
-                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
-                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
-                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
-                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
-                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
-                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
-                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
-                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
-                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" },
-                { name: "sameName", price: '$10', brand: 'samsung', country: 'USA', ship: 'free', img: "build/img/Photo1.png" }
-            ]
         }
-        render() {
-            let listProduct = ''
+        render(mas) {
+            this.arrElems = mas
             for (let i = 0; i < this.arrElems.length; i++) {
-                let Product = new product(this.arrElems[i].name + (i + 1),
+                let Product = new product(
+                    this.arrElems[i].name + (i + 1),
                     this.arrElems[i].price,
                     this.arrElems[i].brand,
                     this.arrElems[i].country,
                     this.arrElems[i].ship,
                     this.arrElems[i].img)
-                listProduct += Product.render()
+                d.querySelector(this.className).innerHTML += Product.render()
             }
-            d.querySelector(this.className).innerHTML = listProduct
         }
     }
 
     let pageShop = new contProduct('.productsPage')
-    pageShop.fetchProduct()
-    pageShop.render()
-    console.log(pageShop)
+  // pageShop.fetchProduct('http://localhost/jsonFiles/responses/catalogData.json', pageShop.render)
 }

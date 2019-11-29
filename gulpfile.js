@@ -49,7 +49,7 @@ function styles() {
 	return gulp.src(cssFiles)
 		.pipe(concat('all.css'))
 		.pipe(autoprefixer({
-			"overrideBrowserslist": ["> 0.1%"],
+			"overrideBrowserslist": ["> 0.01%"],
 			cascade: false
 		}))
 		.pipe(cleanCSS({
